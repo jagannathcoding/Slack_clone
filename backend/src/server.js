@@ -10,12 +10,12 @@ const app=express();
 app.use(express.json());
 app.use(clerkMiddleware());
 
-app.use("/api/inngest", serve({ client: inngest, functions }));
 
 
 app.get("/",(req,res)=>{
-    res.send("Hello WOrld 12");
-})
+    res.send("Hello WOrld 123");
+});
+app.use("/api/inngest", serve({ client: inngest, functions }));
 
 
 
