@@ -33,9 +33,16 @@ const startServer=async()=>{
         console.error("Error starting server ",error);
         process.exit(1);
     }
-}
+};
 
-/*app.listen(ENV.PORT,()=>{
+startServer();
+
+export default app;
+
+
+
+/*
+app.listen(ENV.PORT,()=>{
                     console.log("Server started on port",(ENV.PORT));
                     connectDB();
                 });*/
