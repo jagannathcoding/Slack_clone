@@ -38,6 +38,6 @@ const startServer=async()=>{
 
 startServer();
 
-export default (req, res) => app(req, res);
+export default app;
 
 
