@@ -21,6 +21,7 @@ app.get("/debug-sentry",(req,res)=>{
     throw new Error("My first sentry error");
 });
 
+
 app.get("/",(req,res)=>{
     res.send("Hello WOrld 123");
 });
