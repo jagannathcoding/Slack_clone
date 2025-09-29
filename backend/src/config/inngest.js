@@ -75,6 +75,7 @@ import { connectDB } from "./db.js";
 import { User } from "../models/user.model.js"; // Import the User model
 import {  deleteStreamUser, upsertStreamUser } from "./stream.js";
 
+import { upsertStreamUser } from "./stream.js";
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: "slack-clone" });
 
@@ -101,7 +102,7 @@ const syncUser = inngest.createFunction(
       image: newUser.image,
     });
 
-    
+    await addUserToPublicChannels(newUser.clerkId.toString());
   }
 );
 
