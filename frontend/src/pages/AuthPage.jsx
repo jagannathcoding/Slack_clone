@@ -6,13 +6,17 @@ const AuthPage = () => {
       <div className="auth-left">
         <div className="auth-hero">
           <div className="brand container">
-            <img src="/logo.png" className='brand-logo'/>
+            <img src="/slack-logo.png" className='brand-logo'/>
             <span className="brand-name">EMni</span>
           </div>
 
           <h1 className="hero-title">
             Welcome to work
           </h1>
+
+          <p className='hero-subtitle'>Connect with yourr team secure and real time mesagin.</p>
+
+
         </div>
       </div>
     </div>
