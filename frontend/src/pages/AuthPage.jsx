@@ -1,3 +1,4 @@
+import { SignInButton } from '@clerk/clerk-react'
 import React from 'react'
 
 const AuthPage = () => {
@@ -15,6 +16,24 @@ const AuthPage = () => {
           </h1>
 
           <p className='hero-subtitle'>Connect with yourr team secure and real time mesagin.</p>
+
+          <div className="features-list">
+                <div className='feature-item'>
+                  <span className='feature-icon'>💬</span>
+                  <span >Real time chat</span>
+                </div>
+                <div className="feature-item">
+                  <span className='feature icon'>📽️</span>
+                  <span>Video call and meeting</span>
+                </div>
+
+                <div className="feature-item">
+                  <span className='feature icon'>🔒</span>
+                  <span>Secure and Private</span>
+                </div>
+          </div>
+
+    <SignInButton></SignInButton>
 
 
         </div>
