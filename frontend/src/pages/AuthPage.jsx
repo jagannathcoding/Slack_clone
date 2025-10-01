@@ -34,7 +34,13 @@ const AuthPage = () => {
                 </div>
           </div>
 
-    <SignInButton></SignInButton>
+    <SignInButton>
+      <button className='cta-button'>
+        Lets get started
+      
+      <span className='button-arrow'> → </span>
+      </button>
+    </SignInButton>
 
 
         </div>
