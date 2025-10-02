@@ -34,7 +34,7 @@ const AuthPage = () => {
                 </div>
           </div>
 
-    <SignInButton>
+    <SignInButton mode="modal">
       <button className='cta-button'>
         Lets get started
       
