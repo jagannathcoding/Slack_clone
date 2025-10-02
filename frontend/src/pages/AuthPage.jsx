@@ -45,6 +45,14 @@ const AuthPage = () => {
 
         </div>
       </div>
+
+      <div className='auth-right'>
+        <div className='auth-image-container'>
+          <img src="/auth-i.png" alt = "Team amar" className='auth-image'/>
+        </div>
+        </div>
+
+
     </div>
   )
 }
