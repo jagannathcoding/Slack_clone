@@ -13,6 +13,9 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 
+import {Toaster} from 'react-hot-toast';
+
+const queryClient=new QueryClient();
 
 
 // Import your Publishable Key
@@ -27,8 +30,12 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
       <BrowserRouter>
+
+      <QueryClientProvider client={queryClient}>
       <App />
-      </BrowserRouter>
+      <Toaster/>
+      </QueryClientProvider>
+      </BrowserRouter>  
     </ClerkProvider>       
   </StrictMode>,
 )

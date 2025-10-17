@@ -3,12 +3,13 @@ import React from 'react'
 import HomePage from './pages/HomePage'
 import { Navigate, Route, Routes } from 'react-router'
 import AuthPage from './pages/AuthPage'
+import toast from 'react-hot-toast'
 
 const App = () => {
   return (
      <>
-
-        <SignedIn>
+    <button onClick={()=>toast.success("hello")}>toast</button>
+              <SignedIn>
           <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/auth" element={<Navigate to={"/"} replace />} />
