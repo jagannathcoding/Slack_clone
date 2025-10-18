@@ -33,7 +33,7 @@ createRoot(document.getElementById('root')).render(
 
       <QueryClientProvider client={queryClient}>
       <App />
-      <Toaster/>
+      <Toaster position="top-right"/>
       </QueryClientProvider>
       </BrowserRouter>  
     </ClerkProvider>       
