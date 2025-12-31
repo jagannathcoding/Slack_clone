@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function CallPage() {
   return (
-    <div>CallPage</div>
+    <div>This is CallPage</div>
   )
 }
