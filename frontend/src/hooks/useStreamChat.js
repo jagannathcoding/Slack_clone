@@ -8,3 +8,11 @@ import { getStreamToken } from "../lib/api";
 import * as Sentry from "@sentry/react";
 
 const STREAM_API_KEY=import.meta.env.VITE_STREAM_API_KEY;
+
+
+export const useStreamChat=()=>{
+    const {user}=useUser();
+    const [charClient,setChatClient]=useState(null);
+
+    //fetching stream token using react query
+}
