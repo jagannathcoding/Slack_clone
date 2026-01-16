@@ -15,4 +15,14 @@ export const useStreamChat=()=>{
     const [charClient,setChatClient]=useState(null);
 
     //fetching stream token using react query
-}
+    const {
+        data:tokenData,
+        isLoading:tokenLoading,
+        error:tokenError,
+    }=useQuery({
+        queryKey:["streamToken"],
+        queryFn:getStreamToken,
+        enabled:!!user?.id,
+    });
+    //init stream chat client
+};
