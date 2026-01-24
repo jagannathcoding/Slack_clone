@@ -25,4 +25,10 @@ export const useStreamChat=()=>{
         enabled:!!user?.id,
     });
     //init stream chat client
+    useEffect(()=>{
+        const initChat=async ()=>{
+
+        }
+    },[])///now to do
+
 };
