@@ -27,6 +27,15 @@ export const useStreamChat=()=>{
     //init stream chat client
     useEffect(()=>{
         const initChat=async ()=>{
+            if(!tokenData?.token||!user) return ;
+
+            try{
+
+            }
+            catch{
+                
+            }
+
 
         }
     },[])///now to do
