@@ -30,14 +30,26 @@ export const useStreamChat=()=>{
             if(!tokenData?.token||!user) return ;
 
             try{
-
+                const client=StreamChat.getInstance(STREAM_API_KEY)
+                await client.connectUser({
+                    id:user.id,
+                    name:user.fullName,
+                    image:user.imageUrl,
+                });
+                setChatClient(client);
             }
-            catch{
-                
+            catch(error){
+                console.log("Error conecting to stream",error)
+                Sentry.captureException(error,{
+                    tags:{component:"useStreamChat"},
+                    extra:{
+                        context:"stream_chat_connection",
+                        userId:user?.id,
+                        streamApiKey:STREAM_API_KEY?"present":"missing",
+                    },
+                });   
             }
-
-
-        }
-    },[])///now to do code here
+        };
+    },[]);///now to do code here
 
 };
