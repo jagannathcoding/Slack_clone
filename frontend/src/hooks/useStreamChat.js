@@ -12,7 +12,7 @@ const STREAM_API_KEY=import.meta.env.VITE_STREAM_API_KEY;
 
 export const useStreamChat=()=>{
     const {user}=useUser();
-    const [charClient,setChatClient]=useState(null);
+    const [chatClient,setChatClient]=useState(null);
 
     //fetching stream token using react query
     const {
@@ -30,12 +30,14 @@ export const useStreamChat=()=>{
             if(!tokenData?.token||!user) return ;
 
             try{
-                const client=StreamChat.getInstance(STREAM_API_KEY)
+                const client=StreamChat.getInstance(STREAM_API_KEY);
                 await client.connectUser({
                     id:user.id,
                     name:user.fullName,
                     image:user.imageUrl,
                 });
+                //////here anything?'
+                //need to check
                 setChatClient(client);
             }
             catch(error){
@@ -50,6 +52,19 @@ export const useStreamChat=()=>{
                 });   
             }
         };
-    },[]);///now to do code here
 
+    initChat();
+
+    //cleanup
+    return()=>{
+        if(chatClient){
+            chatClient.disconnectUser();
+           
+        }
+    }
+
+
+    },[tokenData,user,chatClient]);///now to do code here
+
+    return {chatClient,isLoading:tokenLoading,error:tokenError}
 };
