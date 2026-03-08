@@ -87,8 +87,9 @@ export const deleteStreamUser=async(userId)=>{
     }
 };
 
-export const generateStreamToken=async(userId)=>{
-    try{
+//export const generateStreamToken=async(userId)=>{
+  export const generateStreamToken = (userId) =>{
+  try{
         const userIdString=userId.toString();
         return streamClient.createToken(userIdString);
     }
